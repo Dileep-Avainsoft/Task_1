@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +44,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/emp_edit{id}',[EmployeeController::class,'edit'])->name('emp_edit');
     Route::put('/emp_update{id}',[EmployeeController::class,'update'])->name('emp_update');
     Route::get('/emp_delete{id}',[EmployeeController::class,'destroy'])->name('emp_delete');
+    //mail send
+    Route::get('/mail',[MailController::class,'send'])->name('mail');
+    Route::post('/mailsend',[MailController::class,'mailsend'])->name('mailsend');
 
 });
 

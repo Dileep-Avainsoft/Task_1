@@ -37,6 +37,7 @@ return view('employee.emp_view', ['employee'=>$employees]);
      */
     public function store(Request $request)
     {
+
         $data= $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
@@ -108,4 +109,7 @@ return view('employee.emp_view', ['employee'=>$employees]);
         $Emp->delete();
         return redirect()->route('emp_view');
     }
+
+
+
 }

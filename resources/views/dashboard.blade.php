@@ -3,6 +3,8 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <th><a href="{{ route('company_add')}}" class="btn btn-dark">Add Company</a>&nbsp&nbsp&nbsp
             <a href="{{ route('emp_view')}}" class="btn btn-dark">Add Employee</a>
+            &nbsp&nbsp&nbsp
+            <a href="{{ route('mail')}}" class="btn btn-dark">Send mail</a>
         </th>
         </h2>
     </x-slot>
