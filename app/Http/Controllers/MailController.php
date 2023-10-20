@@ -12,10 +12,14 @@ return view("mail");
     }
     public function mailsend(Request $request) {
         $mail_data=[
-            'password'=>$request->password,
+
+            'name'=>$request->name,
             'email'=>$request->email,
+            // 'logo'=>$request->logo,
+            'website'=>$request->website,
         ];
+                    // ];
         Mail::to('codingcommunity.in@gmail.com')->send(new ContectMail($mail_data));
-        return view('dashboard') ;
+        return redirect('dashboard') ;
             }
 }

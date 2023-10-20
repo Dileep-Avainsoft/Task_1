@@ -1,10 +1,18 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <a href="{{route('company.create')}}" class="btn btn-primary">Add Comapny</a>
+            <th><a href="{{ route('company_add')}}" class="btn btn-dark">Add Company</a>&nbsp&nbsp&nbsp
+            <a href="{{ route('emp_view')}}" class="btn btn-dark">Add Employee</a>
+            &nbsp&nbsp&nbsp
+            <a href="{{ route('mail')}}" class="btn btn-dark">Send mail</a>
+            &nbsp&nbsp&nbsp
+            <a href="{{ route('emp_table') }}" class="btn btn-dark">Employee Data Table</a>
+
+             <a href="{{ route('company_table') }}" class="btn btn-dark">Company Data Table</a>
+        </th>
         </h2>
     </x-slot>
-
+    @include('translate')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

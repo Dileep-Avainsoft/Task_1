@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\DatatableController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,7 @@ use App\Http\Controllers\MailController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
@@ -47,7 +48,11 @@ Route::middleware('auth')->group(function () {
     //mail send
     Route::get('/mail',[MailController::class,'send'])->name('mail');
     Route::post('/mailsend',[MailController::class,'mailsend'])->name('mailsend');
-
+//data table
+   Route::get('/emp_table',[DatatableController::class,'table'])->name('emp_table');
+   Route::get('/emp_table_get',[DatatableController::class,'tableget'])->name('emp_table_get');
+   Route::get('/company_table',[DatatableController::class,'company_table'])->name('company_table');
+   Route::get('/get_company_table',[DatatableController::class,'get_company_table'])->name('get_company_table');
 });
 
 require __DIR__.'/auth.php';

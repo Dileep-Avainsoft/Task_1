@@ -6,9 +6,7 @@
             &nbsp&nbsp&nbsp
             <a href="{{ route('mail')}}" class="btn btn-dark">Send mail</a>
             &nbsp&nbsp&nbsp
-            <a href="{{ route('emp_table') }}" class="btn btn-dark">Employee Data Table</a>
-
-             <a href="{{ route('company_table') }}" class="btn btn-dark">Company Data Table</a>
+            <a href="{{ route('data_table') }}" class="btn btn-dark">Employee Data </a>
         </th>
         </h2>
     </x-slot>
@@ -18,7 +16,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    {{ __("HTML stands for HyperText Markup Language. It is used to design the web pages. With the help of HTML, you can create a complete website structure. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages and markup language defines the text document within the tag that define the structure of web pages.") }}
+
+
+
 
                 </div>
             </div>
