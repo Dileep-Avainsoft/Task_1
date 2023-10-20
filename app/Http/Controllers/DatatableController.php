@@ -32,7 +32,7 @@ class DatatableController extends Controller
 
 
 
-        $users = $employees = Employee::select('employees.*', 'companies.name as company_name')
+        $users = Employee::select('employees.*', 'companies.name as company_name')
         ->leftJoin('companies', 'employees.company', '=', 'companies.id');
         $total =$users->count();
 
@@ -41,7 +41,7 @@ class DatatableController extends Controller
 
         // $totalFilter = $total;
 
-      $totalFilter = $employees = Employee::select('employees.*', 'companies.name as company_name')
+      $totalFilter  = Employee::select('employees.*', 'companies.name as company_name')
         ->leftJoin('companies', 'employees.company', '=', 'companies.id');
         if(!empty($searchValue)) {
 

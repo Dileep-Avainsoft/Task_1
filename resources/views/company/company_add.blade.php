@@ -37,7 +37,9 @@
                                 <td> {{$data->name}}</td>
                                 <td> {{$data->email}}</td>
                                 <td><img src="/Company_logo/{{$data->logo}}" width="100" height="100" alt=""></td>
-                                <td> {{$data->website}}</td>
+                                <td><a href="{{$data->website}}" target="_blank">{{$data->website}}</a></td>
+
+
                                 <th>
                                     <a href="/company/edit{{encrypt($data->id)}}" class="btn btn-primary">Edit</a>
                                     <a href="/company/delete{{encrypt($data->id)}}" class="btn btn-danger">Delete</a>
